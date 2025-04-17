@@ -45,4 +45,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // 17 April
+    // relasikan table user dengan table bankAccount
+    public function bankAccounts()
+    {
+        return $this->hasMany(BankAccount::class);
+    }
 }
